@@ -15,8 +15,6 @@ export class StudentComponent implements OnInit {
   nombre!: string;
   nota: number = 10;
 
-
-
   listaAlumnos: Array<Alumnos> = [
     { nombre: 'Laura', nota: 8 },
     { nombre: 'Estefani', nota: 10 },
