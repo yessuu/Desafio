@@ -1,0 +1,23 @@
+<div class="flex">
+
+  <div class="content-wrapper">
+    <ul>
+      <p>{{ fecha | date:'dd/MM/yy' }}</p>
+      <h1>{{title | uppercase }}</h1>
+      <div *ngFor="let usuario of listaAlumnos" >
+        <li *ngIf="usuario.nota >= 10" [ngClass]="usuario.nota >  10 ? 'error' : 'exit'" >
+          {{ user }}: {{ usuario.nombre }} - {{ desciption }}: {{ usuario.nota }}
+        </li>
+      </div>
+    </ul>
+    <ul>
+      <p>{{ fecha | date:'dd/MM/yy' }}</p>
+      <h1>{{ totaltitle | uppercase }}</h1>
+      <div *ngFor="let usuario of listaAlumnos">
+        <li [ngClass]="usuario.nota <  10 ? 'error' : 'exit'" [style.border]="usuario.nota === 10 ? '3px solid #609886': '3px solid white'">
+          <div>{{ user }}: {{ usuario.nombre }} - {{ desciption }}: {{ usuario.nota }} </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
