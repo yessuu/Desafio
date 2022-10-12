@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de Alumos</span>
+            <button class="btn btn btn-info float-end" routerLink="/crear-alumnos">Agregar Alumno</button>
+            <table class="table table-striped mt-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Profesor/a</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let estudiantes of student">
+                    <th scope="row">{{estudiantes.nombre}}</th>
+                    <td>{{estudiantes.apellido}}</td>
+                    <td>A{{estudiantes.curso}}</td>
+                    <td>{{estudiantes.docente}}</td>
+                    <td>
+                      <i class="fas fa-edit text-secondary"></i>
+                      <i class="fas fa-trash-alt text-secondary"></i>
+                    </td>
+                    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
