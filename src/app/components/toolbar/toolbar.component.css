@@ -1,0 +1,7 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    width: calc(100% - 300px);
+    height: 100%;
+    background: #fff;
+    left: 300px;
+    padding: 20px;
+}
